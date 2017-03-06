@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="728.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fractals.FXMLDocumentController">
+    <children>
+      <TabPane prefHeight="629.0" prefWidth="728.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Mandelbrot">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="199.0" prefWidth="728.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+                        <Canvas fx:id="cvsPlot" height="600.0" width="600.0" />
+                        <TextField fx:id="tfMagnification" layoutX="623.0" layoutY="142.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="626.0" layoutY="125.0" text="Magnification" />
+                        <Button fx:id="btnMandelbrot" layoutX="623.0" layoutY="275.0" mnemonicParsing="false" onAction="#handlebtnMandelbrotAction" prefHeight="50.0" prefWidth="80.0" text="Generate Mandelbrot" textAlignment="CENTER" wrapText="true" />
+                        <TextField fx:id="tfResolution" layoutX="623.0" layoutY="222.0" prefHeight="25.0" prefWidth="80.0" />
+                        <Label layoutX="634.0" layoutY="205.0" text="Resolution" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Julia Sets">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="600.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+                        <Canvas fx:id="cvsJulia" height="600.0" width="600.0" />
+                        <Button fx:id="btnJulia" layoutX="624.0" layoutY="275.0" mnemonicParsing="false" onAction="#handlebtnJuliaAction" prefHeight="50.0" prefWidth="80.0" text="Generate Julia" textAlignment="CENTER" wrapText="true" />
+                        <Label layoutX="637.0" layoutY="137.0" text="Parameter" />
+                        <Label layoutX="608.0" layoutY="177.0" text="C=" />
+                        <TextField fx:id="tfC_R" layoutX="646.0" layoutY="173.0" prefHeight="25.0" prefWidth="60.0" />
+                        <TextField fx:id="tfC_I" layoutX="646.0" layoutY="204.0" prefHeight="25.0" prefWidth="60.0" />
+                        <Label layoutX="632.0" layoutY="208.0" text="+" />
+                        <Label layoutX="713.0" layoutY="208.0" text="i" />
+                     </children>
+                  </AnchorPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>
